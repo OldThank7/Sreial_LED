@@ -6,7 +6,8 @@
                 "e:\\XYJ\\Proteus+C\\Demo03\\Sreial_LED\\Lib\\INC",
                 "e:\\XYJ\\Proteus+C\\Demo03\\Sreial_LED\\Lib\\INC\\STC",
                 "D:\\Program Files (x86)\\kwil 5\\C51\\INC",
-                "e:\\XYJ\\Proteus+C\\Demo03\\Sreial_LED"
+                "e:\\XYJ\\Proteus+C\\Demo03\\Sreial_LED",
+                "e:\\XYJ\\Proteus+C\\Demo03\\Sreial_LED\\Lib\\SRC"
             ],
             "defines": [
                 "__C51__",

@@ -1,0 +1,233 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/03/2021  15:42:34  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\PROGRAM FILES (X86)\KWIL 5\C51\BIN\BL51.EXE .\Objects\Sreial_LED.obj, .\Objects\Serial.obj TO .\Objects\Sreial_LED PR
+>> INT (.\Listings\Sreial_LED.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Sreial_LED.obj (SREIAL_LED)
+  .\Objects\Serial.obj (SERIAL)
+  D:\PROGRAM FILES (X86)\KWIL 5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\PROGRAM FILES (X86)\KWIL 5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  D:\PROGRAM FILES (X86)\KWIL 5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Sreial_LED (SREIAL_LED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0019H     UNIT         ?DT?SREIAL_LED
+            DATA    0021H     0003H     UNIT         _DATA_GROUP_
+            DATA    0024H     0002H     UNIT         ?DT?SERIAL
+            IDATA   0026H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?C?LIB_CODE
+            CODE    001CH     0003H     UNIT         ?PR?GETRAND_SBUF?SERIAL
+                    001FH     0004H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     008CH     UNIT         ?C_C51STARTUP
+            CODE    00B2H     005EH     UNIT         ?CO?SREIAL_LED
+            CODE    0110H     0040H     UNIT         ?PR?MAIN?SREIAL_LED
+            CODE    0150H     002FH     UNIT         ?PR?_SEND_STRING?SERIAL
+            CODE    017FH     0029H     UNIT         ?C_INITSEG
+            CODE    01A8H     0018H     UNIT         ?PR?SERIAL_INIT?SERIAL
+            CODE    01C0H     000CH     UNIT         ?PR?SERIALINTERRPUT?SERIAL
+            CODE    01CCH     0008H     UNIT         ?PR?_SEND_BYTE?SERIAL
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Sreial_LED (SREIAL_LED)
+
+
+SEGMENT                              DATA_GROUP 
+  +--> CALLED SEGMENT              START    LENGTH
+--------------------------------------------------
+?C_C51STARTUP                      -----    -----
+  +--> ?PR?MAIN?SREIAL_LED
+  +--> ?C_INITSEG
+
+?PR?MAIN?SREIAL_LED                -----    -----
+  +--> ?PR?SERIAL_INIT?SERIAL
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  15:42:34  PAGE 2
+
+
+  +--> ?PR?GETRAND_SBUF?SERIAL
+  +--> ?CO?SREIAL_LED
+  +--> ?PR?_SEND_STRING?SERIAL
+
+?PR?_SEND_STRING?SERIAL            0021H    0003H
+
+?C_INITSEG                         -----    -----
+  +--> ?CO?SREIAL_LED
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Sreial_LED (SREIAL_LED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SREIAL_LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  B:0090H.0       PUBLIC        LED1
+  B:0090H.1       PUBLIC        LED2
+  D:0008H         PUBLIC        str1
+  D:000BH         PUBLIC        str2
+  D:000EH         PUBLIC        str3
+  D:00A8H         PUBLIC        IE
+  D:0011H         PUBLIC        str4
+  D:0014H         PUBLIC        str5
+  D:0017H         PUBLIC        str6
+  D:001AH         PUBLIC        str7
+  D:001DH         PUBLIC        str8
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:0110H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0020H         PUBLIC        temp
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0110H         LINE#         14
+  C:0110H         LINE#         15
+  C:0110H         LINE#         16
+  C:0113H         LINE#         17
+  C:0113H         LINE#         18
+  C:0113H         LINE#         19
+  C:011EH         LINE#         20
+  C:011EH         LINE#         21
+  C:011EH         LINE#         22
+  C:0120H         LINE#         23
+  C:0123H         LINE#         24
+  C:012CH         LINE#         25
+  C:0135H         LINE#         26
+  C:0137H         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  15:42:34  PAGE 3
+
+
+  C:0137H         LINE#         28
+  C:0139H         LINE#         29
+  C:013CH         LINE#         30
+  C:0145H         LINE#         31
+  C:014EH         LINE#         32
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SREIAL_LED
+
+  -------         MODULE        SERIAL
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  D:0024H         PUBLIC        flag
+  B:0098H.1       PUBLIC        TI
+  C:01CCH         PUBLIC        _send_Byte
+  D:00D8H         PUBLIC        CCON
+  C:0150H         PUBLIC        _send_string
+  D:0099H         PUBLIC        SBUF
+  D:0087H         PUBLIC        PCON
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:0025H         PUBLIC        rand_SBUF
+  B:00A8H.3       PUBLIC        ET1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  C:01C0H         PUBLIC        Serialinterrput
+  C:01A8H         PUBLIC        Serial_Init
+  C:001CH         PUBLIC        getRand_SBUF
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          SERIAL_INIT
+  C:01A8H         LINE#         7
+  C:01A8H         LINE#         8
+  C:01A8H         LINE#         9
+  C:01ABH         LINE#         11
+  C:01AEH         LINE#         13
+  C:01B1H         LINE#         15
+  C:01B4H         LINE#         16
+  C:01B7H         LINE#         18
+  C:01B9H         LINE#         20
+  C:01BBH         LINE#         21
+  C:01BDH         LINE#         22
+  C:01BFH         LINE#         23
+  -------         ENDPROC       SERIAL_INIT
+  -------         PROC          GETRAND_SBUF
+  C:001CH         LINE#         25
+  C:001CH         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  15:42:34  PAGE 4
+
+
+  C:001CH         LINE#         27
+  C:001EH         LINE#         28
+  -------         ENDPROC       GETRAND_SBUF
+  -------         PROC          SERIALINTERRPUT
+  C:01C0H         LINE#         30
+  C:01C0H         LINE#         32
+  C:01C3H         LINE#         33
+  C:01C3H         LINE#         34
+  C:01C5H         LINE#         35
+  C:01C8H         LINE#         36
+  C:01CBH         LINE#         37
+  C:01CBH         LINE#         38
+  -------         ENDPROC       SERIALINTERRPUT
+  -------         PROC          _SEND_BYTE
+  D:0007H         SYMBOL        byte
+  C:01CCH         LINE#         40
+  C:01CCH         LINE#         41
+  C:01CCH         LINE#         43
+  C:01CEH         LINE#         46
+  C:01D1H         LINE#         47
+  C:01D3H         LINE#         48
+  -------         ENDPROC       _SEND_BYTE
+  -------         PROC          _SEND_STRING
+  D:0021H         SYMBOL        str
+  C:0150H         LINE#         50
+  C:0156H         LINE#         51
+  C:0156H         LINE#         52
+  C:015AH         LINE#         53
+  C:015AH         LINE#         54
+  C:0165H         LINE#         55
+  C:0165H         LINE#         56
+  C:0174H         LINE#         57
+  C:0177H         LINE#         58
+  C:0179H         LINE#         59
+  C:017BH         LINE#         60
+  C:017BH         LINE#         61
+  C:017EH         LINE#         62
+  -------         ENDPROC       _SEND_STRING
+  -------         ENDMOD        SERIAL
+
+  -------         MODULE        ?C?CLDPTR
+  C:0003H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SEND_BYTE?SERIAL
+
+Program Size: data=39.0 xdata=0 code=464
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

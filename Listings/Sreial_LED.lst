@@ -1,0 +1,59 @@
+C51 COMPILER V9.60.0.0   SREIAL_LED                                                        01/03/2021 15:42:34 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE SREIAL_LED
+OBJECT MODULE PLACED IN .\Objects\Sreial_LED.obj
+COMPILER INVOKED BY: D:\Program Files (x86)\kwil 5\C51\BIN\C51.EXE Sreial_LED.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\Lib\IN
+                    -C;.\Lib\INC\STC) DEBUG OBJECTEXTEND PRINT(.\Listings\Sreial_LED.lst) OBJECT(.\Objects\Sreial_LED.obj)
+
+line level    source
+
+   1          #include "Serial.h"
+   2          #include "LED.h"
+   3          
+   4          uchar temp;
+   5          uchar *str1 = "LED 1:ON";
+   6          uchar *str2 = "LED 2:ON";
+   7          uchar *str3 = "LED 3:ON";
+   8          uchar *str4 = "LED 4:ON";
+   9          uchar *str5 = "LED 5:ON";
+  10          uchar *str6 = "LED 6:ON";
+  11          uchar *str7 = "LED 7:ON";
+  12          uchar *str8 = "LED 8:ON";
+  13          
+  14          void main()
+  15          {
+  16   1          Serial_Init();
+  17   1          while(1)
+  18   1          {
+  19   2              switch (getRand_SBUF())
+  20   2              {
+  21   3              case '1':
+  22   3                  LED1 = ~LED1;
+  23   3                  if (LED1)
+  24   3                      send_String("LED 1: OFF");
+  25   3                  send_String(str1);
+  26   3                  break;
+  27   3              case '2':
+  28   3                  LED2 = ~LED2;
+  29   3                  if (LED2)
+  30   3                      send_String("LED 2: OFF");
+  31   3                  send_String(str2);
+  32   3                  break;
+  33   3              }
+  34   2          }
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     64    ----
+   CONSTANT SIZE    =     94    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     25    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

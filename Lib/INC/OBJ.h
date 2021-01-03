@@ -1,5 +1,5 @@
-#ifndef __SERALLED_H__
-#define __SERALLED_H__
+#ifndef __OBJ_H__
+#define __OBJ_H__
 
 #include "STC12C5A60S2.H"
 

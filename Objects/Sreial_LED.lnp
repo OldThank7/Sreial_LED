@@ -1,0 +1,4 @@
+".\Objects\Sreial_LED.obj",
+".\Objects\Serial.obj" 
+TO ".\Objects\Sreial_LED" 
+PRINT(".\Listings\Sreial_LED.m51") RAMSIZE(256) 

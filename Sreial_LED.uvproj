@@ -385,6 +385,13 @@
         </Group>
         <Group>
           <GroupName>src</GroupName>
+          <Files>
+            <File>
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Lib\SRC\Serial.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

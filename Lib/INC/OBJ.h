@@ -6,6 +6,9 @@
 #define uchar unsigned char
 #define uint  unsigned int
 
+#define weixuan P2
+#define duanxuan P0
 
+void DigDisplay(uchar num);
 
 #endif // !__SERALLED_H__
